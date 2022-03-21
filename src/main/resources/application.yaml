@@ -1,0 +1,18 @@
+server:
+  port: 8080
+cloud:
+  aws:
+    region:
+      static: eu-central-1
+    stack:
+      auto: false
+    credentials:
+      profile-name: dev
+
+# https://docs.spring.io/spring-cloud-aws/docs/2.2.3.RELEASE/reference/html/#amazon-sdk-configuration
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
